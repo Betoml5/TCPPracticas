@@ -26,7 +26,7 @@ namespace TCPWPFCliente.Services
                 cliente = new();
                 cliente.Connect(ipe);
 
-                var equipo = Dns.GetHostName();
+                var equipo = Environment.UserName;
                 var msg = new MensajeDTO
                 {
                     Fecha = DateTime.Now, Mensaje = "**HELLO",

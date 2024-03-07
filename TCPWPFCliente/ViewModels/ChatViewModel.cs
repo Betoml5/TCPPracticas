@@ -47,7 +47,7 @@ namespace TCPWPFCliente.ViewModels
 
         private void EnviarMensaje()
         {
-            if (string.IsNullOrWhiteSpace(Mensaje))
+            if (!string.IsNullOrWhiteSpace(Mensaje))
             {
                 chatClient.EnviarMensaje(new MensajeDTO
                 {
@@ -56,6 +56,8 @@ namespace TCPWPFCliente.ViewModels
                     Origen = chatClient.equipo
                 });
             }
+
+
         }
 
         private void ChatClient_MensajeRecibido(object? sender, MensajeDTO e)

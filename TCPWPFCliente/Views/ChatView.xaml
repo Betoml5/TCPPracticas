@@ -11,13 +11,13 @@
             <Button Content="Enviar" DockPanel.Dock="Right" Command="{Binding EnviarCommand}"></Button>
             <TextBox AcceptsReturn="True" Height="100" Text="{Binding Mensaje}" ></TextBox>
         </DockPanel>
-        <ListBox Margin="5" ItemsSource="{Binding Mensajes}">
+        <ListBox Margin="5" ItemsSource="{Binding Mensajes}" SelectedIndex="{Binding NumeroMensaje}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border Background="#fff" BorderBrush="gray" BorderThickness="1" CornerRadius="10" Padding="5" Margin="5">
                         <StackPanel>
                             <TextBlock FontWeight="Bold" Text="{Binding Origen}"></TextBlock>
-                            <TextBlock TextAlignment="Justify" Text="{Binding Mensaje}"></TextBlock>
+                            <TextBlock TextAlignment="Justify" FontFamily="Consolas" Text="{Binding Mensaje}"></TextBlock>
                             <TextBlock HorizontalAlignment="Right" Text="{Binding Fecha}"></TextBlock>
 
                         </StackPanel>
